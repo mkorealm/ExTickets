@@ -28,7 +28,6 @@ class App:
         with open(filename, 'r') as file:
             line = file.readline().split()
             self.abc = line[0:2]
-            print(self.abc)
             self.function = self.FUNCTION_TEMPLATE.format(*self.abc)
             if len(line) > 2:
                 self.ct_x_step = float(1 / eval(line[2].replace(',', '.')))  # 1 > x > 0
